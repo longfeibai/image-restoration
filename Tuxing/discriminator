@@ -1,0 +1,60 @@
+digraph {
+	graph [size="12,12"]
+	node [align=left fontname=monospace fontsize=10 height=0.2 ranksep=0.1 shape=box style=filled]
+	2588467608480 [label="
+ (1, 1, 29, 29)" fillcolor=darkolivegreen1]
+	2588521900416 [label=SigmoidBackward0]
+	2588521900224 -> 2588521900416
+	2588521900224 [label=ConvolutionBackward0]
+	2588521897920 -> 2588521900224
+	2588521897920 [label=LeakyReluBackward1]
+	2588521900704 -> 2588521897920
+	2588521900704 [label=NativeBatchNormBackward0]
+	2588521900800 -> 2588521900704
+	2588521900800 [label=ConvolutionBackward0]
+	2588521900992 -> 2588521900800
+	2588521900992 [label=LeakyReluBackward1]
+	2588521901184 -> 2588521900992
+	2588521901184 [label=ConvolutionBackward0]
+	2588521901280 -> 2588521901184
+	2588467608720 [label="model.0.weight
+ (64, 3, 4, 4)" fillcolor=lightblue]
+	2588467608720 -> 2588521901280
+	2588521901280 [label=AccumulateGrad]
+	2588521901232 -> 2588521901184
+	2588467602000 [label="model.0.bias
+ (64)" fillcolor=lightblue]
+	2588467602000 -> 2588521901232
+	2588521901232 [label=AccumulateGrad]
+	2588521900944 -> 2588521900800
+	2588467601840 [label="model.2.weight
+ (128, 64, 4, 4)" fillcolor=lightblue]
+	2588467601840 -> 2588521900944
+	2588521900944 [label=AccumulateGrad]
+	2588521900896 -> 2588521900800
+	2588467602080 [label="model.2.bias
+ (128)" fillcolor=lightblue]
+	2588467602080 -> 2588521900896
+	2588521900896 [label=AccumulateGrad]
+	2588521900752 -> 2588521900704
+	2588467596240 [label="model.3.weight
+ (128)" fillcolor=lightblue]
+	2588467596240 -> 2588521900752
+	2588521900752 [label=AccumulateGrad]
+	2588521900608 -> 2588521900704
+	2588467609360 [label="model.3.bias
+ (128)" fillcolor=lightblue]
+	2588467609360 -> 2588521900608
+	2588521900608 [label=AccumulateGrad]
+	2588521897200 -> 2588521900224
+	2588467608560 [label="model.5.weight
+ (1, 128, 4, 4)" fillcolor=lightblue]
+	2588467608560 -> 2588521897200
+	2588521897200 [label=AccumulateGrad]
+	2588521898832 -> 2588521900224
+	2588467595520 [label="model.5.bias
+ (1)" fillcolor=lightblue]
+	2588467595520 -> 2588521898832
+	2588521898832 [label=AccumulateGrad]
+	2588521900416 -> 2588467608480
+}
